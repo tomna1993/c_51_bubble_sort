@@ -18,6 +18,7 @@ int main(void)
     print_array(unsorted_array, ARRAY_LENGTH);
 }
 
+// Print array
 void print_array(int array[], int length)
 {
     for (int i = 0; i < length; i++)
@@ -27,6 +28,7 @@ void print_array(int array[], int length)
     printf ("\n");
 }
 
+// Bubble sort algorithm
 void bubble_sort(int unsorted_array[], int array_length)
 {
     for (int i = 0; i < array_length; i++)
