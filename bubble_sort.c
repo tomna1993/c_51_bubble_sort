@@ -2,6 +2,7 @@
 
 #define ARRAY_LENGTH 11
 
+void print_array(int array[], int length);
 void bubble_sort(int unsorted_array[], int array_length);
 
 int main(void)
@@ -9,20 +10,21 @@ int main(void)
     int unsorted_array[ARRAY_LENGTH] = {0, 4, 3, 10, 6, 2, 8, 7, 5, 9, 1};
 
     printf ("Unsorted: ");
-
-    for (int i = 0; i < ARRAY_LENGTH; i++)
-    {
-        printf ("%i ", unsorted_array[i]);
-    }
-    printf ("\n");
+    print_array(unsorted_array, ARRAY_LENGTH);
 
     bubble_sort(unsorted_array, ARRAY_LENGTH);
 
     printf ("Sorted: ");
-    for (int i = 0; i < ARRAY_LENGTH; i++)
+    print_array(unsorted_array, ARRAY_LENGTH);
+}
+
+void print_array(int array[], int length)
+{
+    for (int i = 0; i < length; i++)
     {
-        printf ("%i ", unsorted_array[i]);
+        printf ("%i ", array[i]);
     }
+    printf ("\n");
 }
 
 void bubble_sort(int unsorted_array[], int array_length)
